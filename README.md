@@ -1,5 +1,7 @@
 # todo-list-app-and-CI-2
 
+[![Build Status](https://www.travis-ci.com/devAYZ/todo-list-app-and-CI-2.svg?branch=master)](https://www.travis-ci.com/devAYZ/todo-list-app-and-CI-2)
+
 1.
 Creating a todo-app
 
