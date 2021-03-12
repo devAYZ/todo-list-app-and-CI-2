@@ -11,6 +11,7 @@ import CoreData
 
 
 class TodoListModelTest: XCTestCase {
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var todoListData: TodoListItem!
 
@@ -25,6 +26,7 @@ class TodoListModelTest: XCTestCase {
         todoListData = nil
         super.tearDown()
     }
+    
 
     func testEmptyTodoList () throws {
         
@@ -32,8 +34,13 @@ class TodoListModelTest: XCTestCase {
     }
     
     func testTodoListStringLength () throws {
-        
-        XCTAssertGreaterThanOrEqual(todoListData.name!.count, 2)
+        guard let name = todoListData.name else { return }
+        XCTAssertGreaterThanOrEqual(name.count, 2)
+    }
+    
+    func testTodoListFirstNotWhiteSpace () throws {
+        guard let name = todoListData.name else { return }
+        XCTAssertNotEqual(name.first, " ")
     }
 
 }
