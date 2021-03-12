@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
         
-        self.window!.tintColor = #colorLiteral(red: 0.592452511, green: 0.5285605736, blue: 0.5285605736, alpha: 1)
+        self.window!.tintColor = .systemRed
         
         let homeVC = HomePageViewController()
         window?.rootViewController = homeVC
