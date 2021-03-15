@@ -18,7 +18,7 @@ extension HomePageViewController {
         viewListsButton.layer.cornerRadius = 8
         viewListsButton.clipsToBounds = true
         viewListsButton.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 25)
-        viewListsButton.addTarget(self, action: #selector( viewList(_:) ), for: .touchUpInside)
+        viewListsButton.addTarget(self, action: #selector(viewList), for: .touchUpInside)
         viewListsButton.backgroundColor = .systemOrange
         
     }
@@ -60,7 +60,7 @@ extension HomePageViewController {
         
     }
     
-    @objc func viewList(_ sender: Any) {
+    @objc func viewList() {
         
         let viewList = UINavigationController(rootViewController: TodoListTableViewController() )
         present(viewList, animated: true, completion: nil)
